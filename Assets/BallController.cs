@@ -9,7 +9,7 @@ public class BallController : MonoBehaviour
     private GameObject gameoverText;
 
 
-    //スコアを表示するテキスト
+    //スコアを表示するテキスト(課題)
     public GameObject scoreText;
     public int Score = 0;
     //
@@ -37,7 +37,7 @@ public class BallController : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        //衝突する物体とスコアの増加量
+        //衝突する物体とスコアの増加量(課題)
         if (other.gameObject.tag == "SmallStarTag")
         {
             Score += 10;
@@ -52,11 +52,11 @@ public class BallController : MonoBehaviour
         }
         else if (other.gameObject.tag == "LargeCloudTag")
         {
-            Score += 30;
+            Score += 100;
         }
         Debug.Log(Score);
 
-        //スコアを表示
+        //スコアを表示（課題）
         this.scoreText.GetComponent<Text>().text = "Score:" + Score;
     }
 }
